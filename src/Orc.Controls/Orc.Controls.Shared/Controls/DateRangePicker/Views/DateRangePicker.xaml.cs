@@ -45,7 +45,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty RangesProperty = DependencyProperty.Register("Ranges", typeof(ObservableCollection<DateRange>),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-			
         [ViewToViewModel(MappingType = ViewToViewModelMappingType.TwoWayViewWins)]
         public DateRange SelectedRange
         {
@@ -56,7 +55,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty SelectedRangeProperty = DependencyProperty.Register("SelectedRange", typeof(DateRange),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-			
         [ViewToViewModel(MappingType = ViewToViewModelMappingType.TwoWayViewWins)]
         public DateTime StartDate
         {
@@ -67,7 +65,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty StartDateProperty = DependencyProperty.Register("StartDate", typeof(DateTime),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(DateTime.Now, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-			
         [ViewToViewModel(MappingType = ViewToViewModelMappingType.TwoWayViewWins)]
         public DateTime EndDate
         {
@@ -78,7 +75,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty EndDateProperty = DependencyProperty.Register("EndDate", typeof(DateTime),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(DateTime.Now, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-			
         [ViewToViewModel(MappingType = ViewToViewModelMappingType.TwoWayViewWins)]
         public TimeSpan Span
         {
@@ -89,7 +85,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty SpanProperty = DependencyProperty.Register("Span", typeof(TimeSpan),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(TimeSpan.Zero, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-			
         public bool AllowCopyPaste
         {
             get { return (bool)GetValue(AllowCopyPasteProperty); }
@@ -99,7 +94,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty AllowCopyPasteProperty = DependencyProperty.Register("AllowCopyPaste", typeof(bool),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(true));
 
-			
         public string DateTimeFormat
         {
             get { return (string)GetValue(DateTimeFormatProperty); }
@@ -109,7 +103,15 @@ namespace Orc.Controls
         public static readonly DependencyProperty DateTimeFormatProperty = DependencyProperty.Register("DateTimeFormat", typeof(string),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern + " " + CultureInfo.CurrentCulture.DateTimeFormat.LongTimePattern));
 
-			
+        public bool DateTimeHideTime
+        {
+            get { return (bool)GetValue(DateTimeHideTimeProperty); }
+            set { SetValue(DateTimeHideTimeProperty, value); }
+        }
+
+        public static readonly DependencyProperty DateTimeHideTimeProperty = DependencyProperty.Register("DateTimeHideTime", typeof(bool),
+            typeof(DateRangePicker), new FrameworkPropertyMetadata(false));
+
         public bool DateTimeHideSeconds
         {
             get { return (bool)GetValue(DateTimeHideSecondsProperty); }
@@ -119,7 +121,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty DateTimeHideSecondsProperty = DependencyProperty.Register("DateTimeHideSeconds", typeof(bool),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(false));
 
-			
         public bool ShowOptionsButton
         {
             get { return (bool)GetValue(ShowOptionsButtonProperty); }
@@ -129,7 +130,6 @@ namespace Orc.Controls
         public static readonly DependencyProperty ShowOptionsButtonProperty = DependencyProperty.Register("ShowOptionsButton", typeof(bool),
             typeof(DateRangePicker), new FrameworkPropertyMetadata(true));
 
-			
         public bool IsReadOnly
         {
             get { return (bool)GetValue(IsReadOnlyProperty); }
