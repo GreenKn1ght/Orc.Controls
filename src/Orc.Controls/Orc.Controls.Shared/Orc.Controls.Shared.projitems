@@ -128,6 +128,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\WatermarkTextBox\WatermarkTextBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\AmPmLongToAmPmShortConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanAndToCollapsingVisibilityMultiValueConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Hour24ToHour12Converter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\TreeViewItemToLeftMarginValueConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\TimeSpanToTotalStringConverter.cs" />
