@@ -1,4 +1,11 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="BooleanAndToCollapsingVisibilityMultiValueConverter.cs" company="WildGums">
+//   Copyright (c) 2008 - 2017 WildGums. All rights reserved.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -29,7 +36,8 @@ namespace Orc.Controls.Converters
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            // Not supported (and IMultiValueConverter must return null if no conversion is supported)
+            return null;
         }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
